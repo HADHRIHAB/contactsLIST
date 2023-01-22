@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="card w-50 mx-auto text-card p-2 my-5">
+        <h1 class="text-center mt-4">Login</h1>
+
+        <input [(ngModel)]="user.email" type="text" placeholder="email" class="form-control mt-2">
+        <input [(ngModel)]="user.password"  type="password" placeholder="password" class="form-control mt-2">
+        <button (click)="login()" class="form-control btn btn-outline-success mt-5">Login </button>
+    </div>
+    
+</div>

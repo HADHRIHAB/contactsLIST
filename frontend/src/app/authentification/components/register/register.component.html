@@ -1,0 +1,11 @@
+<div class="container">
+    <h1 class="text-center text-light my-5">Create Your Account</h1>
+ <div class="card w-50 mx-auto text-card p-2 my-5">
+    <h1 class="text-center mt-4">Register</h1>
+    <input [(ngModel)]="user.name"type="text" placeholder ="name" class="form-control mt-2">
+    <input [(ngModel)]="user.lastname" type="text" placeholder ="lastname" class="form-control mt-2">
+    <input [(ngModel)]="user.email" type="text" placeholder ="email" class="form-control mt-2">
+    <input [(ngModel)]="user.password" type="password" placeholder ="password" class="form-control mt-2">
+    <button (click)="save(user)" class="form-control btn btn-outline-success mt-5">Save </button>
+</div>
+</div>

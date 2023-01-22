@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<div class="container mt-5">
+ 
+    <div class="d-flex justify-content-between ">
+        <h3 class="text-light">My Address Book</h3>
+ 
+    </div>
+ 
+    <div class="card my-5 p-3">
+ 
+        <table class="table">
+ 
+            <thead>
+                <tr >
+                    <th>#</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Tel</th>
+                    <th>Address</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+ 
+            <tbody>
+                <tr *ngFor="let item of contacts; let i =index;">
+                    <td> {{i +1}} </td>
+                    <td>  <img [src]="'http://127.0.0.1:3000/getimage/'+item.image" class="w-25" > </td>
+                    <td> {{item.name}} </td>
+                    <td> {{item.lastname}} </td>
+                    <td>  {{item.email}}</td>
+                    <td>  {{item.tel}}</td>
+                    <td> {{item.address}}</td>
+                    <td><span (click)="del(item._id)" class="material-symbols-outlined">
+                           delete
+                        </span> 
+                        <span [routerLink]="['/update', item._id]" class="material-symbols-outlined">
+                            edit
+                        </span> </td>
+                </tr>
+            </tbody>
+
+ 
+        </table>
+ 
+    </div>
+ 
+</div>
+
